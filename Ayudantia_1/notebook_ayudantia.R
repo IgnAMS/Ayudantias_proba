@@ -5,6 +5,7 @@
 #############################################
 
 print("hola mundo")
+
 # Asignación de datos
 a <- 3*6+9/7
 a
@@ -96,9 +97,6 @@ m1[m1<=5]
 nuevafila = c(7, 8, 9, 10, 11)
 m2 = rbind(m1, nuevafila) # Agrego row, con cbind podemos agregar filas
 m2
-
-
-
 
 
 
