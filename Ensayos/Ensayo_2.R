@@ -1,22 +1,14 @@
 X = c("A", "A", "A", "B", "B", "B", "C", "C", "C")
 aux = c()
-m = 100000
+m = 1000000
 for(i in 1:m){
   x = sample(X, 3, replace = F) ## Lanzamiento del dado 
-  if(is.na(table(x)["A"])){
-    aux[i] = F
-  }
-  else{
-    aux[i] = sum(table(x)["A"])==3  
-  }
+  aux[i] = (x[1] != x[2] && x[1] != x[3])
 }
-sum = 0
-for(i in 1:m){
-  if(aux[i] == T){
-    sum = sum + 1
-  }
-}
-sum / m
+
+x = sample(X, 3, replace = F)
+x
+x[1] != x[2] && x[1] != x[3]
 
 ## Frecuencia empírica
 mean(aux)
