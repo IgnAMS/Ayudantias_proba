@@ -10,9 +10,9 @@ hist(X) ## Se observa un decaimineto exponecial(lambda) --> ¿lambda?
 
 ## Utilicemos la relación que existe entre medidas empiricas y teóricas
 ## mean(X) = E(X) = 1/lambda
-## medain(X) = x50 = log(2)/lambda
+## median(X) = x50 = log(2)/lambda
 ## sd(X) = sqrt(Var(X)) = 1/lambda
-lambda = 1/mean(X) 
+lambda = 1 / mean(X) 
 hist(X, freq = F, breaks = seq(0,160,5), border = "white", main = "")
 curve(dexp(x, rate = lambda), from = 0,to = 140, n = 1000, add = T, col = "red")
 lambda = log(2)/median(X) 
