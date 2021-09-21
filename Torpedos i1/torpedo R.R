@@ -49,8 +49,6 @@ data = import(file.choose(), dec=",")
 
 library(modeest)
 # tapply permite tomar un vector, en el list se coloca los separadores y luego la funcion 
-?tapply
-?aggregate
 # Se puede elegir uno de los 3 metodos
 X = c(tapply(X = data$PRECIO, INDEX = list(data$MES, data$AÑO), mean))  # Usar este xd, mas facil
 X = c(tapply(X = data$PRECIO, INDEX = list(data$MES+100, data$AÑO), mean)) 
