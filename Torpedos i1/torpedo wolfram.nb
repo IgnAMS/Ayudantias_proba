@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6569,        202]
-NotebookOptionsPosition[      5900,        184]
-NotebookOutlinePosition[      6330,        201]
-CellTagsIndexPosition[      6287,        198]
+NotebookDataLength[      6619,        202]
+NotebookOptionsPosition[      5950,        184]
+NotebookOutlinePosition[      6380,        201]
+CellTagsIndexPosition[      6337,        198]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -76,7 +76,7 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
-   RowBox[{"Coef", " ", "de", " ", "variaci\[OAcute]n", " ", "continuo"}], 
+   RowBox[{"Coef", " ", "de", " ", "variaci\[OAcute]n", " ", "discreto"}], 
    "*)"}], "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
@@ -114,8 +114,8 @@ Cell[BoxData[
     RowBox[{
      FractionBox["\[Sigma]", "\[Mu]"], "//", "N"}]}]}]}]], "Input",
  CellChangeTimes->{{3.8411536605684667`*^9, 3.841153827897806*^9}, {
-  3.841159542031165*^9, 
-  3.8411595554977255`*^9}},ExpressionUUID->"96545382-ebea-4b8d-a3f8-\
+  3.841159542031165*^9, 3.8411595554977255`*^9}, {3.8412456204533863`*^9, 
+  3.8412456215300827`*^9}},ExpressionUUID->"96545382-ebea-4b8d-a3f8-\
 8fa865803577"],
 
 Cell[BoxData[
@@ -183,7 +183,7 @@ Cell[BoxData[
 2a58e76b6df4"]
 },
 WindowSize->{760, 833},
-WindowMargins->{{572, Automatic}, {64, Automatic}},
+WindowMargins->{{233, Automatic}, {Automatic, 69}},
 Magnification:>1.3 Inherited,
 FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 14, 2020)",
 StyleDefinitions->"Default.nb",
@@ -201,12 +201,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 1857, 53, 180, "Input",ExpressionUUID->"2a3a67e0-7e22-4864-a405-4a5d29f9d2f8"],
-Cell[2418, 75, 1448, 43, 190, "Input",ExpressionUUID->"96545382-ebea-4b8d-a3f8-8fa865803577"],
-Cell[3869, 120, 900, 28, 110, "Input",ExpressionUUID->"f49ec5e5-efab-4593-983f-36b2b4e1c987"],
-Cell[4772, 150, 1124, 32, 116, "Input",ExpressionUUID->"c74a7df1-7547-4de5-983a-2a58e76b6df4"]
+Cell[2418, 75, 1498, 43, 190, "Input",ExpressionUUID->"96545382-ebea-4b8d-a3f8-8fa865803577"],
+Cell[3919, 120, 900, 28, 110, "Input",ExpressionUUID->"f49ec5e5-efab-4593-983f-36b2b4e1c987"],
+Cell[4822, 150, 1124, 32, 116, "Input",ExpressionUUID->"c74a7df1-7547-4de5-983a-2a58e76b6df4"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
