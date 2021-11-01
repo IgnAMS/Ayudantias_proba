@@ -35,6 +35,7 @@ pgamma(2, shape=13, rate=5)
 
 
 # 6)
+# a)
 library(rio)
 data = import(file.choose())
 head(data)
@@ -42,8 +43,70 @@ head(data)
 xp = sort(data$velocidad)
 N = length(xp)
 p = 1:N/(N+1)
-fit1 = lm(log(xp) ~ log(-log(1 - p))) # Ajustarlo a weibul?
+fit1 = lm(log(xp) ~ log(-log(1 - p))) # Ajustarlo a weibul
 fit2 = lm(xp ~ qlogis(p)) # Ajustarlo a logistica
 fit3 = lm(xp ~ qnorm(p)) # Ajustarlo a normal
-?lm
+fit1
+
+summary(fit1)$adj.r.squared
+summary(fit2)$adj.r.squared
+summary(fit3)$adj.r.squared
+
+# Se ajusta mejor como weibull
+
+# Rango intercuartilico
+qweibull(0.75, shape=1/fit1$coef[2], scale=exp(fit1$coef[1])) -
+  qweibull(0.25, shape=1/fit1$coef[2], scale=exp(fit1$coef[1]))
+
+
+# b)
+xp = sort(data$HP)
+N = length(xp)
+p = 1:N/(N+1)
+fit1 = lm(log(xp) ~ log(-log(1 - p))) # Ajustarlo a weibul
+fit2 = lm(xp ~ qlogis(p)) # Ajustarlo a logistica
+fit3 = lm(log(xp) ~ qlogis(p)) # Ajustarlo a log-logistica
+fit1
+
+summary(fit1)$adj.r.squared
+summary(fit2)$adj.r.squared
+summary(fit3)$adj.r.squared
+
+# Se ajusta mejor logisitica
+
+1-plogis(100, location=fit2$coef[1], scale=fit2$coef[2])
+
+
+
+# c)
+
+xp = sort(data$defensa)
+N = length(xp)
+p = 1:N/(N+1)
+fit1 = lm(log(xp) ~ log(-log(1 - p))) # Ajustarlo a weibul
+fit2 = lm(log(xp) ~ qlogis(p)) # Ajustarlo a log-logistica
+fit3 = lm(log(xp) ~ qnorm(p)) # Ajustarlo a log-normal
+fit1
+
+summary(fit1)$adj.r.squared
+summary(fit2)$adj.r.squared
+summary(fit3)$adj.r.squared
+
+# Se ajusta mejor a fit2 -> log-logistica
+
+plogis(log(75), location=fit2$coef[1], scale=fit2$coef[2])
+
+# 7)
+# sigma2 = cov(cbind(X, Y))
+# pmvnorm(lower=c(80, 160), upper=c(Inf, Inf), mean=mu, sigma=sigma2)
+
+
+
+
+
+
+
+
+
+
 

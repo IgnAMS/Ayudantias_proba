@@ -11,6 +11,14 @@
 dhyper(x, m, n, k)
 
 
+###################
+# Geometrica(p)
+# La probabilidad de que el primer evento n sea verdadero
+# n: primer evento de exito
+# q: eventos fallidos, es decir, n-1
+pgeom(2, p=0.121)
+
+
 
 ####################
 # Weibul(eta, Beta)
@@ -50,9 +58,17 @@ plogis(q, location=mu, scale=sigma)
 # rate: nu
 
 # Probabilidad de que ocurran mas de x casos en q tiempo
-pgamma(q, shape=x+ 1, rate=nu)
+pgamma(q, shape=x 1, rate=nu)
 
 
+#################
+# Binomial(n, p) 
+# q: cuantil
+# size: numero de datos
+# prob: probabilidad e exito
+pbinom(q, size, prob)
+# En el peor de los casos usar:
+sum(dbinom(x=a:b, size, p)) # Donde a:b es el vector donde sumo
 
 
 
