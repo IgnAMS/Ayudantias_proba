@@ -58,7 +58,7 @@ plogis(q, location=mu, scale=sigma)
 # rate: nu
 
 # Probabilidad de que ocurran mas de x casos en q tiempo
-pgamma(q, shape=x 1, rate=nu)
+pgamma(q, shape=x, rate=nu)
 
 
 #################
@@ -69,6 +69,20 @@ pgamma(q, shape=x 1, rate=nu)
 pbinom(q, size, prob)
 # En el peor de los casos usar:
 sum(dbinom(x=a:b, size, p)) # Donde a:b es el vector donde sumo
+
+
+#################
+# NegBinom(n, p)
+# n: tamano de la muestra
+# p: probabilidad
+# se quiere hasta el kesimo exito, en r usa el kesimo fracaso
+# En el codigo no funciona exactamnte igual
+# n: numero de exitos
+# x, q: es el numero de fracasos
+# 2 exitos entre 5 casos con probabilidad 0.1 -> n = size = 2, q = 3, p = 0.1
+dnbinom(3, 2, prob=0.1)
+# dnbinom = choose(n + q - 1, n - 1) * p^n * (1-p)^q
+choose(5 - 1, 2 - 1) * 0.1^2 * (1-0.1)^(5-2) # Este fue el visto en clases
 
 
 
