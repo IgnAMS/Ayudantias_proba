@@ -3,6 +3,7 @@
 # 1)
 # a)
 1 - pweibull(5 ,shape=1, scale=2)
+dhyper()
 
 # b)
 ppois(3, lambda=6/24*8)
