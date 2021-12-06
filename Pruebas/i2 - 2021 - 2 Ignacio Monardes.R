@@ -99,12 +99,25 @@ Aux = na.omit(Aux)
 
 mu = mean(Aux$X) + cor(Aux$Y, Aux$X) * sd(Aux$X) / sd(Aux$Y) * (803 - mean(Aux$Y))
 sigma = sd(Aux$X) * sqrt(1 - cor(Aux$Y, Aux$X)) 
+cor(Aux$X, Aux$Y)
 cor(Aux$Y, Aux$X)
 1 - pnorm(710, mean=mu, sd=sigma)
 
 
 
-
+X = data$PSU_L
+Y = data$PSU_C
+Data = as.data.frame(na.omit(cbind(X,Y)))
+mu.x = mean(Data$X)
+mu.y = mean(Data$Y)
+sigma.x = sd(Data$X)
+sigma.y = sd(Data$Y)
+rho = cor(Data$X, Data$Y)
+x = 710
+y = 803
+mu = mu.x+(y - mu.y)*sigma.x*rho/sigma.y
+sigma = sigma.x*sqrt(1-rho^2)
+pnorm(x, mean = mu, sd = sigma, lower.tail = F)
 
 
 
