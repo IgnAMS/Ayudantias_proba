@@ -56,10 +56,15 @@ mean(HP>1500) # El plnorm es mas cercano
 
 # 9
 p_0 = 0.3
-p_real = 1/4
+p_real = 30/120
 n = 120
 z_0 = (p_real - p_0) / sqrt(p_0 * (1-p_0) / n)
 valor_p = pnorm(z_0)
+
+
+# No sirve el z test, 
+# z.test(p_real, mu=p0, stdev=sqrt(p_0 * (1-p_0) / n), alternative = "less")
+
 
 # 10
 mu_muestra = 17
@@ -67,7 +72,6 @@ mu_0 = 20
 s = 17
 n = 100
 t_0 = (mu_muestra - mu_0) / (s / sqrt(n))
-pt(t_0, n-1)
 pnorm(t_0)
 
 z.test(mu_muestra, mu = mu_0, alternative = "less", stdev = s, n = n)
