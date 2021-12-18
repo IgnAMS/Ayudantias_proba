@@ -188,7 +188,7 @@ rownames(Tabla) = c("<11", "11-22", "22-33", "33-44", ">44", "Total")
 Tabla
 
 
-# Estadistico de prueba X^2 ~ Chi-cuadrado(k2 - 1 -v)
+# Estadistico de prueba X^2 ~ Chi-cuadrado(k2 - 1 - v)
 # k2: numero de intervalos
 # v: numero de parametros estimados
 X2 = Tabla[6, 3]
@@ -208,6 +208,7 @@ abline(v=qchisq(1-alpha,df=k2-1-v), lty=2, lwd=3, col="blue")
 # Se rechaza el modelo! 
 
 chisq.test(x=O, p=p)
+
  
 # Test de kolmogorov ---------------------------
 # H0: X~Normal vs X!~Normal
